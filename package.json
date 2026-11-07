@@ -1,0 +1,59 @@
+{
+  "name": "block-colors",
+  "displayName": "Block Colors",
+  "description": "Pick colors for VS Code UI blocks (title bar, side bar, tabs, editor, panel, status bar) from a sidebar color panel.",
+  "version": "0.1.0",
+  "publisher": "haoxi-local",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "keywords": [
+    "color",
+    "theme",
+    "colorCustomizations",
+    "workbench"
+  ],
+  "main": "./extension.js",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "blockColors",
+          "title": "Block Colors",
+          "icon": "media/palette.svg"
+        }
+      ]
+    },
+    "views": {
+      "blockColors": [
+        {
+          "type": "webview",
+          "id": "blockColors.panel",
+          "name": "Color Panel"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "blockColors.open",
+        "title": "Open Color Panel",
+        "category": "Block Colors"
+      },
+      {
+        "command": "blockColors.resetAll",
+        "title": "Reset All Block Colors",
+        "category": "Block Colors"
+      }
+    ]
+  }
+}
