@@ -45,7 +45,7 @@ Needs Node.js (for `npx`) and VS Code 1.74 or later.
 ```sh
 git clone https://github.com/Haoxi-Yuan/vscode-block-colors.git
 cd vscode-block-colors
-npx --yes @vscode/vsce package --allow-missing-repository --skip-license
+npx --yes @vscode/vsce package
 code --install-extension block-colors-0.1.0.vsix
 ```
 
